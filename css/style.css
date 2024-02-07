@@ -1,7 +1,18 @@
 #grid {
     display: flex;
     flex-wrap: wrap;
+}
+
+.square100 {
     width: 500px;
+}
+
+.square81 {
+    width: 450px;
+}
+
+.square49 {
+    width: 350px;
 }
 
 .square {
@@ -16,5 +27,5 @@
 }
 
 .activation {
-    background-color: yellow;
+    background-color: aqua;
 }

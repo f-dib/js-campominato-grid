@@ -5,9 +5,33 @@ let grid = document.querySelector("#grid");
 button.addEventListener("click", 
     function(){ 
 
+        let gridNumber;
+        let difficulty = document.querySelector("#difficulty-menu").value;
+
+        console.log(difficulty);
+
+        if (difficulty == 'difficulty-1') {
+            grid.classList.add('square100');
+            grid.classList.remove('square81');
+            grid.classList.remove('square49');
+            gridNumber = Number(100);
+        }
+        if (difficulty == 'difficulty-2') {
+            grid.classList.add('square81');
+            grid.classList.remove('square100');
+            grid.classList.remove('square49');
+            gridNumber = Number(81);
+        }
+        if (difficulty == 'difficulty-3') {
+            grid.classList.add('square49');
+            grid.classList.remove('square81');
+            grid.classList.remove('square100');
+            gridNumber = Number(49);
+        }
+
         grid.innerHTML = "";
         
-        for (i = 0; i < 100; i++) {
+        for (i = 0; i < gridNumber; i++) {
         
             let squareElement = document.createElement('div');
             squareElement.classList.add('square');
@@ -21,7 +45,7 @@ button.addEventListener("click",
                     this.classList.toggle("activation");
                 })
 
-        }    
+        } 
+        
        
 });
-
