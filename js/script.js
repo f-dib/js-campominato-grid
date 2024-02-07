@@ -8,8 +8,6 @@ button.addEventListener("click",
         let gridNumber;
         let difficulty = document.querySelector("#difficulty-menu").value;
 
-        console.log(difficulty);
-
         if (difficulty == 'difficulty-1') {
             grid.classList.add('square100');
             grid.classList.remove('square81');
