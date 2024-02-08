@@ -32,16 +32,20 @@ button.addEventListener("click",
         for (i = 0; i < gridNumber; i++) {
         
             let squareElement = document.createElement('div');
-            squareElement.classList.add('square');
-            squareElement.innerHTML = `${i + 1}`;
+            let contentElement = document.createElement('div');
+            squareElement.classList.add('button-11');
+            contentElement.classList.add('button-11__content');
+            contentElement.innerHTML = `${i + 1}`;
             grid.append(squareElement);
+            squareElement.append(contentElement);
 
-            
-            squareElement.addEventListener("click", 
-                function(){
-                    console.log(this.innerText);
-                    this.classList.toggle("activation");
-                })
+
+            contentElement.addEventListener("click", 
+            function(){
+                console.log(this.innerText);
+                this.classList.toggle("content_activation");
+                squareElement.classList.toggle("activation");
+            })
 
         } 
         
